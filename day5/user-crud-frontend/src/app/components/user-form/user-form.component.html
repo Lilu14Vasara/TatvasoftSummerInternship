@@ -1,0 +1,13 @@
+<div>
+  <h3>{{formUser.id === 0 ? 'Add User' : 'Edit User'}}</h3>
+  <form (ngSubmit)="saveUser()">
+    <label>Username:
+      <input [(ngModel)]="formUser.username" name="username" required />
+    </label>
+    <label>Email:
+      <input [(ngModel)]="formUser.email" name="email" />
+    </label>
+    <button type="submit">Save</button>
+    <button type="button" (click)="cancel.emit()">Cancel</button>
+  </form>
+</div>

@@ -1,0 +1,23 @@
+<div>
+  <h2>User List</h2>
+  <button (click)="selectedUser = blankUser()">Add User</button>
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th><th>Username</th><th>Email</th><th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users">
+        <td>{{user.id}}</td>
+        <td>{{user.username}}</td>
+        <td>{{user.email}}</td>
+        <td>
+          <button (click)="editUser(user)">Edit</button>
+          <button (click)="deleteUser(user.id)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <app-user-form *ngIf="selectedUser" [user]="selectedUser" (saved)="onUserSaved()" (cancel)="selectedUser=undefined"></app-user-form>
+</div>
