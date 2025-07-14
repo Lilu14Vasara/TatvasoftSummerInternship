@@ -1,0 +1,10 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\Mission.Api",
+    "\\Mission.Repositories",
+    "\\Mission.Repositories\\Repository"
+  ],
+  "SelectedNode": "\\Mission.Api\\appsettings.Development.json",
+  "PreviewInSolutionExplorer": false
+}
